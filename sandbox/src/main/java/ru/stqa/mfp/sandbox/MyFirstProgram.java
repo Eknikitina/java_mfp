@@ -12,6 +12,10 @@ public class MyFirstProgram {
     int a = 4;
     int b = 5;
     System.out.println("Площадь прямоугольника со сторонами " + a + " и " + b + " = " + area(a, b));
+
+    double c = 3;
+    double d = 5;
+    System.out.println("Площадь прямоугольника со сторонами " + c + " и " + d + " равна " + area( c, d) );
   }
 
   public static void hello(String somebody) {
@@ -22,5 +26,8 @@ public static int area (int len) {
 }
 public static int area (int a, int b) {
     return a * b;
+}
+public static double area (double c, double d) {
+    return c * d;
 }
 }
