@@ -15,7 +15,7 @@ public class MyFirstProgram {
     Rectangle r = new Rectangle(4, 6);
     System.out.println("Площадь прямоугольника со сторонами " + r.a + " и " + r.b + " = " + r.area());
 
-    Point p = new Point(0, 2, 4, 6);
+    Point p = new Point(2, 4, 6, 8);
     System.out.println("Дистанция между точками равна " + p.distance());
   }
 
