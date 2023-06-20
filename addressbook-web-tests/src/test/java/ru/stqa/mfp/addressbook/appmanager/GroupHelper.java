@@ -21,10 +21,8 @@ public class GroupHelper {
   }
 
   public void fillGroupForm(GroupData groupData) {
-    By locator = By.name("group_name");
-    String text = groupData.getName();
-    wd.findElement(locator).click();
-    type(locator, text);
+    wd.findElement(By.name("group_name")).click();
+    type(By.name("group_name"), groupData.getName());
     type(By.name("group_header"), groupData.getHeader());
     type(By.name("group_footer"), groupData.getFooter());
   }
