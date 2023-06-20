@@ -1,10 +1,11 @@
-package ru.stqa.mfp.addressbook;
+package ru.stqa.mfp.addressbook.tests;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import ru.stqa.mfp.addressbook.model.ContactData;
 
 import java.time.Duration;
 
