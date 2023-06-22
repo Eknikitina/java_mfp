@@ -4,9 +4,12 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class PointTest {
+
   @Test
   public void testDistance() {
-    Point p =  new Point(2, 4, 6, 8);
-    Assert.assertEquals(p.distance(), 5.656854249492381);
+    Point point1 = new Point(2.0, 6.0);
+    Point point2 = new Point(4.0, 8.0);
+    Assert.assertEquals(point1.distance(point2), 2.8284271247461903);
   }
 }
+

@@ -11,8 +11,7 @@ public class MyFirstProgram {
     System.out.println("Площадь квадрата со стороной " + s.l + " равна " + s.area());
 
     Rectangle r = new Rectangle(4, 6);
-   // System.out.println("Площадь прямоугольника со сторонами " + r.a + " и " + r.b + " = " + r.area());
-    System.out.println(String.format("Площадь прямоугольника со сторонами %d и %d = %d", r.a, r.b, r.area()));
+    System.out.println("Площадь прямоугольника со сторонами " + r.a + " и " + r.b + " = " + r.area());
 
     Point p1 = new Point(2, 6);
     Point p2 = new Point(4, 8);
@@ -20,7 +19,6 @@ public class MyFirstProgram {
   }
 
   public static void hello(String somebody) {
-    //System.out.println("Hello, " + somebody + "!");
-    System.out.printf("Hello, %s!%n", somebody);
+    System.out.println("Hello, " + somebody + "!");
   }
 }

@@ -1,6 +1,9 @@
 package ru.stqa.mfp.addressbook.tests;
 
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -8,8 +11,6 @@ import org.testng.annotations.Test;
 import ru.stqa.mfp.addressbook.model.ContactData;
 
 import java.time.Duration;
-
-import static org.testng.Assert.fail;
 
 public class ContactCreationTests {
   private WebDriver wb;

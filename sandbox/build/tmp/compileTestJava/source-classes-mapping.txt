@@ -1,2 +1,4 @@
 ru/stqa/mfp/sandbox/SquareTest.java
  ru.stqa.mfp.sandbox.SquareTest
+ru/stqa/mfp/sandbox/PointTest.java
+ ru.stqa.mfp.sandbox.PointTest
