@@ -42,4 +42,16 @@ public class ContactHelper extends HelperBase {
     wd.findElement(By.name("pass")).sendKeys("secret");
     wd.findElement(By.xpath("//input[@value='Login']")).click();
   }
+
+  public void selectContact() {
+    click(By.id("4"));
+  }
+
+  public void deleteSelectedContact() {
+    click(By.xpath("//input[@value='Delete']"));
+  }
+
+  public void confirmDeletion() {
+    wd.switchTo().alert().accept();
+  }
 }
