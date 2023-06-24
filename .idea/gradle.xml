@@ -11,6 +11,7 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
+        <option name="testRunner" value="PLATFORM" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/sandbox" />
         <option name="modules">
           <set>
