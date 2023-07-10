@@ -26,7 +26,7 @@ public class ContactHelper extends HelperBase {
   }
 
   public void selectContact() {
-    click(By.xpath("//img[@alt='Edit']"));
+    click(By.name("selected[]"));
   }
 
   public void deleteSelectedContact() {
