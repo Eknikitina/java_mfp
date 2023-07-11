@@ -1,3 +1,7 @@
+ru/stqa/mfp/addressbook/LoginAdmin.java
+ ru.stqa.mfp.addressbook.LoginAdmin
+ru/stqa/mfp/addressbook/model/GroupData.java
+ ru.stqa.mfp.addressbook.model.GroupData
 ru/stqa/mfp/addressbook/appmanager/GroupHelper.java
  ru.stqa.mfp.addressbook.appmanager.GroupHelper
 ru/stqa/mfp/addressbook/model/ContactData.java
@@ -12,14 +16,10 @@ ru/stqa/mfp/addressbook/tests/ContactCreationTests.java
  ru.stqa.mfp.addressbook.tests.ContactCreationTests
 ru/stqa/mfp/addressbook/tests/ContactDeletionTests.java
  ru.stqa.mfp.addressbook.tests.ContactDeletionTests
-ru/stqa/mfp/addressbook/LoginAdmin.java
- ru.stqa.mfp.addressbook.LoginAdmin
 ru/stqa/mfp/addressbook/tests/ContactModificationTests.java
  ru.stqa.mfp.addressbook.tests.ContactModificationTests
 ru/stqa/mfp/addressbook/tests/GroupCreationTests.java
  ru.stqa.mfp.addressbook.tests.GroupCreationTests
-ru/stqa/mfp/addressbook/model/GroupData.java
- ru.stqa.mfp.addressbook.model.GroupData
 ru/stqa/mfp/addressbook/appmanager/HelperBase.java
  ru.stqa.mfp.addressbook.appmanager.HelperBase
 ru/stqa/mfp/addressbook/appmanager/ApplicationManager.java
