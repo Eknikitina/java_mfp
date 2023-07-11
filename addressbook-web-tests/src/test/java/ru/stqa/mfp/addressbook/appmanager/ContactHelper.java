@@ -55,4 +55,14 @@ public class ContactHelper extends HelperBase {
   public void returnToHomePage() {
     click(By.linkText("home page"));
   }
+
+  public void createContact(ContactData contact) {
+    fillContactForm(new ContactData("Vanya", "Muromskiyi", "80009000000", "email@gmail.com", "test1"), true);
+    submitContactCreation();
+    returntoContactPage();
+  }
+
+  public boolean isThereAContact() {
+    return isElementPresent(By.name("selected[]"));
+  }
 }
