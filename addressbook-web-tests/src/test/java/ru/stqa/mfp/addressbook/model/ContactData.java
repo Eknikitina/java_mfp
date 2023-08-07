@@ -1,37 +1,38 @@
 package ru.stqa.mfp.addressbook.model;
 
 public class ContactData {
-  private final String name;
-  private final String lastname;
-  private final String mobile;
-  private final String email;
-  private final String group;
+    private final String name;
+    private final String lastname;
+    private final String mobile;
+    private final String email;
+    private final String group;
 
-  public ContactData(String name, String lastname, String mobile, String email, String group) {
-    this.name = name;
-    this.lastname = lastname;
-    this.mobile = mobile;
-    this.email = email;
-    this.group = group;
-  }
+    public ContactData(String lastname, String name, String mobile, String email, String group) {
+        this.lastname = lastname;
+        this.name = name;
+        this.mobile = mobile;
+        this.email = email;
+        this.group = group;
+    }
 
-  public String getName() {
-    return name;
-  }
+    public String getName() {
+        return name;
+    }
 
-  public String getLastname() {
-    return lastname;
-  }
+    public String getLastname() {
 
-  public String getMobile() {
-    return mobile;
-  }
+      return lastname;
+    }
 
-  public String getEmail() {
-    return email;
-  }
+    public String getMobile() {
+        return mobile;
+    }
 
-  public String getGroup() {
-    return group;
-  }
+    public String getEmail() {
+        return email;
+    }
+
+    public String getGroup() {
+        return group;
+    }
 }
