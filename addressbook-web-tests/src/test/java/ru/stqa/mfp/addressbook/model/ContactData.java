@@ -3,29 +3,12 @@ package ru.stqa.mfp.addressbook.model;
 import java.util.Objects;
 
 public class ContactData {
-    private int id;
-    private final String name;
-    private final String lastname;
-    private final String mobile;
-    private final String email;
-    private final String group;
-
-    public ContactData(String lastname, String name, String mobile, String email, String group) {
-        this.id = 0;
-        this.lastname = lastname;
-        this.name = name;
-        this.mobile = mobile;
-        this.email = email;
-        this.group = group;
-    }
-    public ContactData(int id, String lastname, String name, String mobile, String email, String group) {
-        this.id = id;
-        this.lastname = lastname;
-        this.name = name;
-        this.mobile = mobile;
-        this.email = email;
-        this.group = group;
-    }
+    private int id = Integer.MAX_VALUE;;
+    private String name;
+    private String lastname;
+    private String mobile;
+    private String email;
+    private String group;
 
     public String getName() {
         return name;
@@ -33,7 +16,7 @@ public class ContactData {
 
     public String getLastname() {
 
-      return lastname;
+        return lastname;
     }
 
     public String getMobile() {
@@ -48,9 +31,36 @@ public class ContactData {
         return group;
     }
 
-    public void setId(int id) {
+    public ContactData withId(int id) {
         this.id = id;
+        return this;
     }
+
+    public ContactData withName(String name) {
+        this.name = name;
+        return this;
+    }
+
+    public ContactData withLastname(String lastname) {
+        this.lastname = lastname;
+        return this;
+    }
+
+    public ContactData withMobile(String mobile) {
+        this.mobile = mobile;
+        return this;
+    }
+
+    public ContactData withEmail(String email) {
+        this.email = email;
+        return this;
+    }
+
+    public ContactData withGroup(String group) {
+        this.group = group;
+        return this;
+    }
+
 
     public int getId() {
         return id;
@@ -65,6 +75,7 @@ public class ContactData {
                 ", mobile='" + mobile + '\'' +
                 '}';
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

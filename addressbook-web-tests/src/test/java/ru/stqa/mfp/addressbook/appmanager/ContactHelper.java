@@ -61,8 +61,8 @@ public class ContactHelper extends HelperBase {
         click(By.linkText("home page"));
     }
 
-    public void create(ContactData contact) {
-        fillContactForm(new ContactData("Muromskiyi", "Vanya", "80009000000", "email@gmail.com", "[none]"), true);
+    public void createC(ContactData contact) {
+        fillContactForm(new ContactData().withLastname("Муромский").withName("Иван").withMobile("80009000000").withEmail("email@gmail.com").withGroup("[none]"), true);
         submitContactCreation();
         returntoContactPage();
     }
@@ -93,7 +93,7 @@ public class ContactHelper extends HelperBase {
         List<WebElement> elements = wd.findElements(By.name("entry"));
         for (WebElement element : elements) {
             int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
-            ContactData contact = new ContactData(id, "Muromskiyi", "Vanya", "80009000000", "email@gmail.com", null);
+            ContactData contact = new ContactData().withId(id).withLastname("Муромский").withName("Иван").withMobile("80009000000").withEmail("email@gmail.com").withGroup(null);
             contacts.add(contact);
         }
         return contacts;

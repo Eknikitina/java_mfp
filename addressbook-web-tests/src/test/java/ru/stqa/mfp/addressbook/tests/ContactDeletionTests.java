@@ -13,11 +13,11 @@ public class ContactDeletionTests extends TestBase {
         app.goTo().homePage();
         if (app.contact().list().size() == 0) {
             app.goTo().gotoContactCreation();
-            app.contact().create(new ContactData("Muromskiyi", "Vanya", "80009000000", "email@gmail.com", "test1"));
+            app.contact().createC(new ContactData().withLastname("Муромский").withName("Иван").withMobile("80009000000").withEmail("email@gmail.com").withGroup("test1"));
         }
     }
 
-    @Test(enabled = false)
+    @Test
     public void testContactDeleted() {
         List<ContactData> before = app.contact().list();
         int index = before.size() - 1;
