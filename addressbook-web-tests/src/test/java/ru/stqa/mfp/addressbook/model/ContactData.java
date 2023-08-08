@@ -3,6 +3,7 @@ package ru.stqa.mfp.addressbook.model;
 import java.util.Objects;
 
 public class ContactData {
+    private int id;
     private final String name;
     private final String lastname;
     private final String mobile;
@@ -10,6 +11,15 @@ public class ContactData {
     private final String group;
 
     public ContactData(String lastname, String name, String mobile, String email, String group) {
+        this.id = Integer.MAX_VALUE;
+        this.lastname = lastname;
+        this.name = name;
+        this.mobile = mobile;
+        this.email = email;
+        this.group = group;
+    }
+    public ContactData(int id, String lastname, String name, String mobile, String email, String group) {
+        this.id = id;
         this.lastname = lastname;
         this.name = name;
         this.mobile = mobile;
@@ -37,6 +47,15 @@ public class ContactData {
     public String getGroup() {
         return group;
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
 
     @Override
     public String toString() {
