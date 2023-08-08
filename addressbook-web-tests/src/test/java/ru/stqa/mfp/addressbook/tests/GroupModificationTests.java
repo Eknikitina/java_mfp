@@ -1,33 +1,33 @@
 package ru.stqa.mfp.addressbook.tests;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.stqa.mfp.addressbook.model.GroupData;
 
 import java.util.HashSet;
 import java.util.List;
-import java.util.Objects;
 
 public class GroupModificationTests extends TestBase {
-
-  @Test
-  public void testGroupModification() {
-    app.getNavigationHelper().gotoGroupPage();
-    if (! app.getGroupHelper().isThereAGroup()) {
-      app.getGroupHelper().createGroup(new GroupData("New group5", null, null));
+    @BeforeMethod
+    public void ensurePreconditions() {
+        app.getNavigationHelper().gotoGroupPage();
+        if (!app.getGroupHelper().isThereAGroup()) {
+            app.getGroupHelper().createGroup(new GroupData("New group5", null, null));
+        }
     }
-    List<GroupData> before = app.getGroupHelper().getGroupList();
-    app.getGroupHelper().selectGroup(before.size() - 1);
-    app.getGroupHelper().initGroupModification();
-    GroupData group = new GroupData(before.get(before.size() - 1).getId(), "New group5", "test3", "test4");
-    app.getGroupHelper().fillGroupForm(group);
-    app.getGroupHelper().submitGroupModification();
-    app.getGroupHelper().returnToGroupPage();
-    List<GroupData> after = app.getGroupHelper().getGroupList();
-    Assert.assertEquals(after.size(), before.size());
 
-    before.remove(before.size() -1);
-    before.add(group);
-    Assert.assertEquals(new HashSet<Object>(before), new HashSet<Object>(after));
-  }
+    @Test
+    public void testGroupModification() {
+        List<GroupData> before = app.getGroupHelper().getGroupList();
+        int index = before.size() - 1;
+        GroupData group = new GroupData(before.get(index).getId(), "New group5", "test3", "test4");
+        app.getGroupHelper().modifyGroup(index, group);
+        List<GroupData> after = app.getGroupHelper().getGroupList();
+        Assert.assertEquals(after.size(), before.size());
+
+        before.remove(index);
+        before.add(group);
+        Assert.assertEquals(new HashSet<Object>(before), new HashSet<Object>(after));
+    }
 }
