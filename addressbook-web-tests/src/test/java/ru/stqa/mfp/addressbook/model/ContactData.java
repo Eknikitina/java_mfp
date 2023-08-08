@@ -1,5 +1,7 @@
 package ru.stqa.mfp.addressbook.model;
 
+import java.util.Objects;
+
 public class ContactData {
     private final String name;
     private final String lastname;
@@ -43,5 +45,18 @@ public class ContactData {
                 ", lastname='" + lastname + '\'' +
                 ", mobile='" + mobile + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ContactData that = (ContactData) o;
+        return Objects.equals(name, that.name) && Objects.equals(lastname, that.lastname) && Objects.equals(mobile, that.mobile) && Objects.equals(email, that.email) && Objects.equals(group, that.group);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, lastname, mobile, email, group);
     }
 }
