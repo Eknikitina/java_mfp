@@ -11,7 +11,7 @@ public class ContactData {
     private final String group;
 
     public ContactData(String lastname, String name, String mobile, String email, String group) {
-        this.id = Integer.MAX_VALUE;
+        this.id = 0;
         this.lastname = lastname;
         this.name = name;
         this.mobile = mobile;
