@@ -17,12 +17,12 @@ public class ContactCreationTests extends TestBase {
                 withLastname("Муромский").withName("Иван").withMobile(null).withEmail("email@gmail.com").withGroup("group1");
         app.contact().create(contact);
         app.goTo().homePage();
+        assertThat(app.contact().count(), equalTo(before.size() + 1));
         Contacts after = app.contact().all();
-        assertThat(after.size(), equalTo(before.size() + 1));
         assertThat(after, equalTo(
                 before.withAdded(contact.withId(after.stream().mapToInt(ContactData::getId).max().getAsInt()))));
     }
-    @Test(enabled = false)
+    @Test
     public void testBadContactCreation() throws Exception {
         app.goTo().homePage();
         Contacts before = app.contact().all();
@@ -31,8 +31,8 @@ public class ContactCreationTests extends TestBase {
                 withLastname("Муромский'").withName("Иван'").withMobile(null).withEmail("email@gmail.com").withGroup("group1");
         app.contact().create(contact);
         app.goTo().homePage();
+        assertThat(app.contact().count(), equalTo(before.size()));
         Contacts after = app.contact().all();
-        assertThat(after.size(), equalTo(before.size()));
         assertThat(after, equalTo(before));
     }
 }
