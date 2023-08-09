@@ -14,7 +14,7 @@ public class ContactCreationTests extends TestBase {
         Contacts before = app.contact().all();
         app.goTo().gotoContactCreation();
         ContactData contact = new ContactData().
-                withLastname("Муромский").withName("Иван").withMobile("80009000000").withEmail("email@gmail.com").withGroup("group1");
+                withLastname("Муромский").withName("Иван").withMobile(null).withEmail("email@gmail.com").withGroup("group1");
         app.contact().create(contact);
         app.goTo().homePage();
         Contacts after = app.contact().all();
@@ -28,7 +28,7 @@ public class ContactCreationTests extends TestBase {
         Contacts before = app.contact().all();
         app.goTo().gotoContactCreation();
         ContactData contact = new ContactData().
-                withLastname("Муромский'").withName("Иван'").withMobile("80009000000").withEmail("email@gmail.com").withGroup("group1");
+                withLastname("Муромский'").withName("Иван'").withMobile(null).withEmail("email@gmail.com").withGroup("group1");
         app.contact().create(contact);
         app.goTo().homePage();
         Contacts after = app.contact().all();
