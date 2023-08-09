@@ -3,7 +3,8 @@ package ru.stqa.mfp.addressbook.model;
 import java.util.Objects;
 
 public class ContactData {
-    private int id = Integer.MAX_VALUE;;
+    private int id = Integer.MAX_VALUE;
+    ;
     private String name;
     private String lastname;
     private String mobile;
@@ -21,8 +22,16 @@ public class ContactData {
     private String email3;
     private String homepage;
     private String allPhones;
+    private String getAllEmails;
+    private String address2;
 
+    public String getAddress2() {
+        return address2;
+    }
 
+    public String getGetAllEmails() {
+        return getAllEmails;
+    }
     public String getAllPhones() {
         return allPhones;
     }
@@ -67,6 +76,7 @@ public class ContactData {
 
         return lastname;
     }
+
     public String getMobile() {
         return mobile;
     }
@@ -78,6 +88,7 @@ public class ContactData {
     public String getGroup() {
         return group;
     }
+
     public int getId() {
         return id;
     }
@@ -85,44 +96,55 @@ public class ContactData {
     public String getHome() {
         return home;
     }
+
     public String getWork() {
         return work;
     }
+
     public String getNickname() {
         return nickname;
     }
+
     public ContactData withId(int id) {
         this.id = id;
         return this;
     }
+
     public ContactData withName(String name) {
         this.name = name;
         return this;
     }
+
     public ContactData withLastname(String lastname) {
         this.lastname = lastname;
         return this;
     }
+
     public ContactData withMobile(String mobile) {
         this.mobile = mobile;
         return this;
     }
+
     public ContactData withEmail(String email) {
         this.email = email;
         return this;
     }
+
     public ContactData withGroup(String group) {
         this.group = group;
         return this;
     }
+
     public ContactData withHome(String home) {
         this.home = home;
         return this;
     }
+
     public ContactData withWork(String work) {
         this.work = work;
         return this;
     }
+
     public ContactData withMiddlename(String middlename) {
         this.middlename = middlename;
         return this;
@@ -167,8 +189,13 @@ public class ContactData {
         this.homepage = homepage;
         return this;
     }
+
     public ContactData withAllPhones(String allPhones) {
         this.allPhones = allPhones;
+        return this;
+    }
+    public ContactData withAddress2(String address2) {
+        this.address2 = address2;
         return this;
     }
 
@@ -183,6 +210,11 @@ public class ContactData {
     @Override
     public int hashCode() {
         return Objects.hash(id, name, lastname);
+    }
+
+    public ContactData withAllEmails(String AllEmails) {
+        this.address2 = AllEmails;
+        return this;
     }
 
     @Override
