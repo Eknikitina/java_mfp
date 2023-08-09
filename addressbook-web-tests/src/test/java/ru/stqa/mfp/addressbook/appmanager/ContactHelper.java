@@ -7,11 +7,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import ru.stqa.mfp.addressbook.model.ContactData;
 import ru.stqa.mfp.addressbook.model.Contacts;
-import ru.stqa.mfp.addressbook.model.Groups;
-
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
+
 
 public class ContactHelper extends HelperBase {
 
@@ -65,7 +62,7 @@ public class ContactHelper extends HelperBase {
     }
 
     public void createC(ContactData contact) {
-        fillContactForm(new ContactData().withLastname("Муромский").withName("Иван").withMobile("80009000000").withEmail("email@gmail.com").withGroup("[none]"), true);
+        fillContactForm(contact, true);
         submitContactCreation();
         contactCache = null;
         returntoContactPage();
@@ -104,7 +101,9 @@ public class ContactHelper extends HelperBase {
         List<WebElement> elements = wd.findElements(By.name("entry"));
         for (WebElement element : elements) {
             int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
-            ContactData contact = new ContactData().withId(id).withLastname("Муромский").withName("Иван").withMobile("80009000000").withEmail("email@gmail.com").withGroup(null);
+            String lastname = elements.get(1).getText();
+            String name = elements.get(2).getText();
+            ContactData contact = new ContactData().withId(id).withLastname(lastname).withName(name);
             contactCache.add(contact);
         }
         return new Contacts(contactCache);
