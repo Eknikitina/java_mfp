@@ -7,9 +7,10 @@ public class ContactData {
     private String name;
     private String lastname;
     private String mobile;
-
     private String email;
     private String group;
+    private String home;
+    private String work;
 
     public String getName() {
         return name;
@@ -19,7 +20,6 @@ public class ContactData {
 
         return lastname;
     }
-
     public String getMobile() {
         return mobile;
     }
@@ -31,42 +31,48 @@ public class ContactData {
     public String getGroup() {
         return group;
     }
-
-    public ContactData withId(int id) {
-        this.id = id;
-        return this;
-    }
-
-    public ContactData withName(String name) {
-        this.name = name;
-        return this;
-    }
-
-    public ContactData withLastname(String lastname) {
-        this.lastname = lastname;
-        return this;
-    }
-
-    public ContactData withMobile(String mobile) {
-        this.mobile = mobile;
-        return this;
-    }
-
-    public ContactData withEmail(String email) {
-        this.email = email;
-        return this;
-    }
-
-    public ContactData withGroup(String group) {
-        this.group = group;
-        return this;
-    }
-
-
     public int getId() {
         return id;
     }
 
+    public String getHome() {
+        return home;
+    }
+    public String getWork() {
+        return work;
+    }
+    public ContactData withId(int id) {
+        this.id = id;
+        return this;
+    }
+    public ContactData withName(String name) {
+        this.name = name;
+        return this;
+    }
+    public ContactData withLastname(String lastname) {
+        this.lastname = lastname;
+        return this;
+    }
+    public ContactData withMobile(String mobile) {
+        this.mobile = mobile;
+        return this;
+    }
+    public ContactData withEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    public ContactData withGroup(String group) {
+        this.group = group;
+        return this;
+    }
+    public ContactData withHome(String home) {
+        this.home = home;
+        return this;
+    }
+    public ContactData withWork(String work) {
+        this.work = work;
+        return this;
+    }
 
     @Override
     public boolean equals(Object o) {
