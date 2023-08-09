@@ -11,6 +11,53 @@ public class ContactData {
     private String group;
     private String home;
     private String work;
+    private String middlename;
+    private String nickname;
+    private String title;
+    private String company;
+    private String address;
+    private String fax;
+    private String email2;
+    private String email3;
+    private String homepage;
+    private String allPhones;
+
+
+    public String getAllPhones() {
+        return allPhones;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getCompany() {
+        return company;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getFax() {
+        return fax;
+    }
+
+    public String getEmail2() {
+        return email2;
+    }
+
+    public String getEmail3() {
+        return email3;
+    }
+
+    public String getHomepage() {
+        return homepage;
+    }
+
+    public String getMiddlename() {
+        return middlename;
+    }
 
     public String getName() {
         return name;
@@ -40,6 +87,9 @@ public class ContactData {
     }
     public String getWork() {
         return work;
+    }
+    public String getNickname() {
+        return nickname;
     }
     public ContactData withId(int id) {
         this.id = id;
@@ -71,6 +121,54 @@ public class ContactData {
     }
     public ContactData withWork(String work) {
         this.work = work;
+        return this;
+    }
+    public ContactData withMiddlename(String middlename) {
+        this.middlename = middlename;
+        return this;
+    }
+
+    public ContactData withNickname(String nickname) {
+        this.nickname = nickname;
+        return this;
+    }
+
+    public ContactData withTitle(String title) {
+        this.title = title;
+        return this;
+    }
+
+    public ContactData withCompany(String company) {
+        this.company = company;
+        return this;
+    }
+
+    public ContactData withAddress(String address) {
+        this.address = address;
+        return this;
+    }
+
+    public ContactData withFax(String fax) {
+        this.fax = fax;
+        return this;
+    }
+
+    public ContactData withEmail2(String email2) {
+        this.email2 = email2;
+        return this;
+    }
+
+    public ContactData withEmail3(String email3) {
+        this.email3 = email3;
+        return this;
+    }
+
+    public ContactData withHomepage(String homepage) {
+        this.homepage = homepage;
+        return this;
+    }
+    public ContactData withAllPhones(String allPhones) {
+        this.allPhones = allPhones;
         return this;
     }
 
