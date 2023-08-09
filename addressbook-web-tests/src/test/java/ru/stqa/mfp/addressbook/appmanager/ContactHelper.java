@@ -61,7 +61,7 @@ public class ContactHelper extends HelperBase {
         click(By.linkText("home page"));
     }
 
-    public void createC(ContactData contact) {
+    public void create(ContactData contact) {
         fillContactForm(contact, true);
         submitContactCreation();
         contactCache = null;
@@ -100,10 +100,10 @@ public class ContactHelper extends HelperBase {
         contactCache = new Contacts();
         List<WebElement> elements = wd.findElements(By.name("entry"));
         for (WebElement element : elements) {
-            List<WebElement> contactDataCells = element.findElements(By.cssSelector("td"));
+            List<WebElement> cells = element.findElements(By.cssSelector("td"));
             int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
-            String lastname = contactDataCells.get(1).getText();
-            String name = contactDataCells.get(2).getText();
+            String lastname = cells.get(1).getText();
+            String name = cells.get(2).getText();
             ContactData contact = new ContactData().withId(id).withLastname(lastname).withName(name);
             contactCache.add(contact);
         }
