@@ -44,7 +44,11 @@ public class ContactHelper extends HelperBase {
         type(By.name("email3"), contactData.getEmail3());
         type(By.name("homepage"), contactData.getHomepage());
         if (creation) {
-            new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
+            try {
+                selectByText(By.name("new_group"), contactData.getGroup());
+            } catch (Exception NoSuchElementException) {
+                selectDefault(By.name("new_group"));
+            }
         } else {
             Assert.assertFalse(isElementPresent(By.name("new_group")));
         }
@@ -120,10 +124,10 @@ public class ContactHelper extends HelperBase {
             String lastname = cells.get(1).getText();
             String name = cells.get(2).getText();
             String address = cells.get(3).getText();
-            String allEmails = cells.get(4).getText();
+            String allEmail = cells.get(4).getText();
             String allPhones = cells.get(5).getText();
 
-            contactCache.add(new ContactData().withId(id).withLastname(lastname).withName(name).withAllPhones(allPhones).withAllEmails(allEmails).withAddress(address));
+            contactCache.add(new ContactData().withId(id).withLastname(lastname).withName(name).withAddress(address).withAllEmail(allEmail).withAllPhones(allPhones));
         }
         return new Contacts(contactCache);
     }

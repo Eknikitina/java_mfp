@@ -9,7 +9,7 @@ import ru.stqa.mfp.addressbook.appmanager.ApplicationManager;
 
 public class TestBase {
 
-  protected static final ApplicationManager app = new ApplicationManager(Browser.CHROME.browserName());
+  protected static final ApplicationManager app = new ApplicationManager(Browser.FIREFOX.browserName());
 
   @BeforeSuite(alwaysRun = true)
   public void setUp() throws Exception {

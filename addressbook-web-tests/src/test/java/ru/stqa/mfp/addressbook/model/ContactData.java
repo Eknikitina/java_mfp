@@ -22,18 +22,17 @@ public class ContactData {
     private String email3;
     private String homepage;
     private String allPhones;
-    private String getAllEmails;
+    private String allEmail;
     private String address2;
 
     public String getAddress2() {
         return address2;
     }
-
-    public String getGetAllEmails() {
-        return getAllEmails;
-    }
     public String getAllPhones() {
         return allPhones;
+    }
+    public String getAllEmail() {
+        return allEmail;
     }
 
     public String getTitle() {
@@ -199,6 +198,11 @@ public class ContactData {
         return this;
     }
 
+    public ContactData withAllEmail(String allEmail) {
+        this.allEmail = allEmail;
+        return this;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -210,11 +214,6 @@ public class ContactData {
     @Override
     public int hashCode() {
         return Objects.hash(id, name, lastname);
-    }
-
-    public ContactData withAllEmails(String AllEmails) {
-        this.address2 = AllEmails;
-        return this;
     }
 
     @Override

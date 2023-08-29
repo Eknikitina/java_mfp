@@ -29,7 +29,7 @@ public class ContactPhoneTests extends TestBase {
         // адреса
         assertThat(cleanedAddress(contact.getAddress()), equalTo(cleanedAddress(contactInfoFromEditForm.getAddress())));
         // email
-        assertThat(contact.getGetAllEmails(), equalTo(mergeEmails(contactInfoFromEditForm)));
+        assertThat(contact.getAllEmail(), equalTo(mergeEmails(contactInfoFromEditForm)));
     }
 
     private String mergePhones(ContactData contact) {
@@ -54,7 +54,7 @@ public class ContactPhoneTests extends TestBase {
         return address.replaceAll("\n", "");
     }
 
-    public static String cleanedEmails(String phone) {
-        return phone.trim();
+    public static String cleanedEmails(String email) {
+        return email.trim();
     }
 }
