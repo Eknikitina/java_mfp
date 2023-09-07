@@ -3,6 +3,9 @@ package ru.stqa.mfp.addressbook.tests;
 import org.testng.annotations.Test;
 import ru.stqa.mfp.addressbook.model.ContactData;
 import ru.stqa.mfp.addressbook.model.Contacts;
+
+import java.io.File;
+
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.*;
 
@@ -13,9 +16,10 @@ public class ContactCreationTests extends TestBase {
         app.goTo().homePage();
         Contacts before = app.contact().all();
         app.goTo().gotoContactCreation();
+        File photo = new File("src/test/resources/stru.png");
         ContactData contact = new ContactData().
                 withLastname("Муромский").withName("Иван").withMiddlename("Иванович").withNickname("Огурчик").withTitle("Title").withCompany("Company").withAddress("Address").withHome("111").
-                withMobile("8800").withWork("8863").withFax("222").withEmail("email").withEmail2("email2").withEmail3("email3").withGroup("group1").withAddress2("г.Москва").withHomepage("г.Ростов");
+                withMobile("8800").withWork("8863").withFax("222").withEmail("email").withEmail2("email2").withEmail3("email3").withPhoto(photo).withAddress2("г.Москва").withHomepage("г.Ростов");
         app.contact().create(contact);
         app.goTo().homePage();
         assertThat(app.contact().count(), equalTo(before.size() + 1));
