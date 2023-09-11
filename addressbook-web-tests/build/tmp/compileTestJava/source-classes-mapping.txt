@@ -1,44 +1,44 @@
 ru/stqa/mfp/addressbook/appmanager/GroupHelper.java
  ru.stqa.mfp.addressbook.appmanager.GroupHelper
-ru/stqa/mfp/addressbook/tests/ContactPhoneTests.java
- ru.stqa.mfp.addressbook.tests.ContactPhoneTests
+ru/stqa/mfp/addressbook/appmanager/NavigationHelper.java
+ ru.stqa.mfp.addressbook.appmanager.NavigationHelper
 ru/stqa/mfp/addressbook/model/ContactData.java
  ru.stqa.mfp.addressbook.model.ContactData
 ru/stqa/mfp/addressbook/appmanager/SessionHelper.java
  ru.stqa.mfp.addressbook.appmanager.SessionHelper
 ru/stqa/mfp/addressbook/appmanager/ContactHelper.java
  ru.stqa.mfp.addressbook.appmanager.ContactHelper
+ru/stqa/mfp/addressbook/model/Groups.java
+ ru.stqa.mfp.addressbook.model.Groups
+ru/stqa/mfp/addressbook/generator/ContactDataGenerator.java
+ ru.stqa.mfp.addressbook.generator.ContactDataGenerator
+ru/stqa/mfp/addressbook/generator/GroupDataGenerator.java
+ ru.stqa.mfp.addressbook.generator.GroupDataGenerator
+ru/stqa/mfp/addressbook/LoginAdmin.java
+ ru.stqa.mfp.addressbook.LoginAdmin
+ru/stqa/mfp/addressbook/model/Contacts.java
+ ru.stqa.mfp.addressbook.model.Contacts
+ru/stqa/mfp/addressbook/appmanager/HelperBase.java
+ ru.stqa.mfp.addressbook.appmanager.HelperBase
+ru/stqa/mfp/addressbook/model/GroupData.java
+ ru.stqa.mfp.addressbook.model.GroupData
+ru/stqa/mfp/addressbook/tests/ContactPhoneTests.java
+ ru.stqa.mfp.addressbook.tests.ContactPhoneTests
 ru/stqa/mfp/addressbook/tests/TestBase.java
  ru.stqa.mfp.addressbook.tests.TestBase
 ru/stqa/mfp/addressbook/tests/ContactCreationTests.java
  ru.stqa.mfp.addressbook.tests.ContactCreationTests
  ru.stqa.mfp.addressbook.tests.ContactCreationTests$1
-ru/stqa/mfp/addressbook/tests/ContactDeletionTests.java
- ru.stqa.mfp.addressbook.tests.ContactDeletionTests
-ru/stqa/mfp/addressbook/LoginAdmin.java
- ru.stqa.mfp.addressbook.LoginAdmin
-ru/stqa/mfp/addressbook/tests/ContactModificationTests.java
- ru.stqa.mfp.addressbook.tests.ContactModificationTests
-ru/stqa/mfp/addressbook/tests/GroupCreationTests.java
- ru.stqa.mfp.addressbook.tests.GroupCreationTests
- ru.stqa.mfp.addressbook.tests.GroupCreationTests$1
-ru/stqa/mfp/addressbook/model/GroupData.java
- ru.stqa.mfp.addressbook.model.GroupData
-ru/stqa/mfp/addressbook/model/Contacts.java
- ru.stqa.mfp.addressbook.model.Contacts
-ru/stqa/mfp/addressbook/appmanager/HelperBase.java
- ru.stqa.mfp.addressbook.appmanager.HelperBase
 ru/stqa/mfp/addressbook/appmanager/ApplicationManager.java
  ru.stqa.mfp.addressbook.appmanager.ApplicationManager
 ru/stqa/mfp/addressbook/tests/GroupModificationTests.java
  ru.stqa.mfp.addressbook.tests.GroupModificationTests
 ru/stqa/mfp/addressbook/tests/GroupDeletionTests.java
  ru.stqa.mfp.addressbook.tests.GroupDeletionTests
-ru/stqa/mfp/addressbook/generator/GroupDataGenerator.java
- ru.stqa.mfp.addressbook.generator.GroupDataGenerator
-ru/stqa/mfp/addressbook/generator/ContactDataGenerator.java
- ru.stqa.mfp.addressbook.generator.ContactDataGenerator
-ru/stqa/mfp/addressbook/model/Groups.java
- ru.stqa.mfp.addressbook.model.Groups
-ru/stqa/mfp/addressbook/appmanager/NavigationHelper.java
- ru.stqa.mfp.addressbook.appmanager.NavigationHelper
+ru/stqa/mfp/addressbook/tests/ContactDeletionTests.java
+ ru.stqa.mfp.addressbook.tests.ContactDeletionTests
+ru/stqa/mfp/addressbook/tests/ContactModificationTests.java
+ ru.stqa.mfp.addressbook.tests.ContactModificationTests
+ru/stqa/mfp/addressbook/tests/GroupCreationTests.java
+ ru.stqa.mfp.addressbook.tests.GroupCreationTests
+ ru.stqa.mfp.addressbook.tests.GroupCreationTests$1

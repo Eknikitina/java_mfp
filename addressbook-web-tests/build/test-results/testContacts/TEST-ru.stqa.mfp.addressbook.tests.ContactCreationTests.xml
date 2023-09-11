@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.stqa.mfp.addressbook.tests.ContactCreationTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-09-11T20:54:16" hostname="LAPTOP-843QP6DH" time="13.664">
+<testsuite name="ru.stqa.mfp.addressbook.tests.ContactCreationTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-09-11T21:27:36" hostname="LAPTOP-843QP6DH" time="17.036">
   <properties/>
-  <testcase name="testContactCreation[0](ContactData{id=2147483647, name='Name 0', lastname='Lastname 0', mobile='+00'})" classname="ru.stqa.mfp.addressbook.tests.ContactCreationTests" time="5.653"/>
-  <testcase name="testContactCreation[1](ContactData{id=2147483647, name='Name 1', lastname='Lastname 1', mobile='+11'})" classname="ru.stqa.mfp.addressbook.tests.ContactCreationTests" time="3.846"/>
-  <testcase name="testContactCreation[2](ContactData{id=2147483647, name='Name 2', lastname='Lastname 2', mobile='+22'})" classname="ru.stqa.mfp.addressbook.tests.ContactCreationTests" time="4.165"/>
+  <testcase name="testContactCreation[0](ContactData{id=2147483647, name='Name 0', lastname='Lastname 0', mobile='+00'})" classname="ru.stqa.mfp.addressbook.tests.ContactCreationTests" time="7.042"/>
+  <testcase name="testContactCreation[1](ContactData{id=2147483647, name='Name 1', lastname='Lastname 1', mobile='+11'})" classname="ru.stqa.mfp.addressbook.tests.ContactCreationTests" time="5.118"/>
+  <testcase name="testContactCreation[2](ContactData{id=2147483647, name='Name 2', lastname='Lastname 2', mobile='+22'})" classname="ru.stqa.mfp.addressbook.tests.ContactCreationTests" time="4.875"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
