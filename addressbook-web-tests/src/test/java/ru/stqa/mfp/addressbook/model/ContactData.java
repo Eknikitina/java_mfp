@@ -1,34 +1,56 @@
 package ru.stqa.mfp.addressbook.model;
 
+import com.google.gson.annotations.Expose;
+
 import java.io.File;
 import java.util.Objects;
 
 public class ContactData {
     private int id = Integer.MAX_VALUE;
-    ;
+    @Expose
     private String name;
+    @Expose
     private String lastname;
+    @Expose
     private String mobile;
+    @Expose
     private String email;
+    @Expose
     private String group;
+    @Expose
     private String home;
+    @Expose
     private String work;
+    @Expose
     private String middlename;
+    @Expose
     private String nickname;
+    @Expose
     private String title;
+    @Expose
     private String company;
+    @Expose
     private String address;
+    @Expose
     private String fax;
+    @Expose
     private String email2;
+    @Expose
     private String email3;
+    @Expose
     private String homepage;
     private String allPhones;
     private String allEmail;
     private String address2;
-    private File photo;
+    @Expose
+    private String photo;
 
     public File getPhoto() {
-        return photo;
+        if (photo != null) {
+            return new File (photo);
+        } else {
+            return null;
+        }
     }
 
     public String getAddress2() {
@@ -209,7 +231,7 @@ public class ContactData {
         return this;
     }
     public ContactData withPhoto(File photo) {
-        this.photo = photo;
+        this.photo = photo.getPath();
         return this;
     }
     @Override

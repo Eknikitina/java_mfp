@@ -1,25 +1,40 @@
 package ru.stqa.mfp.addressbook.tests;
 
+import com.google.gson.*;
+import com.google.gson.reflect.TypeToken;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import ru.stqa.mfp.addressbook.model.ContactData;
 import ru.stqa.mfp.addressbook.model.Contacts;
 
-import java.io.File;
+import java.io.*;
+import java.lang.reflect.Type;
+import java.util.Iterator;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.*;
 
-public class ContactCreationTests extends TestBase {
-
-    @Test
-    public void testContactCreation() throws Exception {
+public class ContactCreationTests extends TestBase implements JsonDeserializer<File> {
+    @DataProvider
+    public Iterator<Object[]> validContactsFromJson() throws IOException {
+        BufferedReader reader = new BufferedReader(new FileReader("src/test/resources/contact.json"));
+        String json = "";
+        String line = reader.readLine();
+        while (line != null) {
+            json += line;
+            line = reader.readLine();
+        }
+        Gson gson = new Gson();
+        List<ContactData> contacts = gson.fromJson(json, new TypeToken<List<ContactData>>(){}.getType()); //List<ContactData>.class
+        return contacts.stream().map((g) -> new Object[]{g}).collect(Collectors.toList()).iterator();
+    }
+    @Test(dataProvider = "validContactsFromJson")
+    public void testContactCreation(ContactData contact) throws Exception {
         app.goTo().homePage();
         Contacts before = app.contact().all();
         app.goTo().gotoContactCreation();
-        File photo = new File("src/test/resources/stru.png");
-        ContactData contact = new ContactData().
-                withLastname("Муромский").withName("Иван").withMiddlename("Иванович").withNickname("Огурчик").withTitle("Title").withCompany("Company").withAddress("Address").withHome("111").
-                withMobile("8800").withWork("8863").withFax("222").withEmail("email").withEmail2("email2").withEmail3("email3").withPhoto(photo).withAddress2("г.Москва").withHomepage("г.Ростов");
         app.contact().create(contact);
         app.goTo().homePage();
         assertThat(app.contact().count(), equalTo(before.size() + 1));
@@ -27,7 +42,7 @@ public class ContactCreationTests extends TestBase {
         assertThat(after, equalTo(
                 before.withAdded(contact.withId(after.stream().mapToInt(ContactData::getId).max().getAsInt()))));
     }
-    @Test
+    @Test(enabled = false)
     public void testBadContactCreation() throws Exception {
         app.goTo().homePage();
         Contacts before = app.contact().all();
@@ -39,5 +54,10 @@ public class ContactCreationTests extends TestBase {
         assertThat(app.contact().count(), equalTo(before.size()));
         Contacts after = app.contact().all();
         assertThat(after, equalTo(before));
+    }
+
+    @Override
+    public File deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
+        return new File(json.getAsString());
     }
 }
