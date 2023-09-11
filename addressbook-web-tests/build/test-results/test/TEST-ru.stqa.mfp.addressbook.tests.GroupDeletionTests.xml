@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.stqa.mfp.addressbook.tests.GroupDeletionTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-09-11T20:46:56" hostname="LAPTOP-843QP6DH" time="1.834">
+  <properties/>
+  <testcase name="testGroupDeletions" classname="ru.stqa.mfp.addressbook.tests.GroupDeletionTests" time="1.834"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
