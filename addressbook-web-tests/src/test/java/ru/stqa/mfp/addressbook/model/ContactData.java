@@ -1,48 +1,84 @@
 package ru.stqa.mfp.addressbook.model;
 
 import com.google.gson.annotations.Expose;
+import org.hibernate.annotations.Type;
 
+import javax.persistence.*;
 import java.io.File;
 import java.util.Objects;
-
+@Entity
+@Table(name = "addressbook")
 public class ContactData {
+    @Id
+    @Column(name = "id")
     private int id = Integer.MAX_VALUE;
     @Expose
+    @Column(name = "firstname")
     private String name;
     @Expose
+    @Column(name = "lastname")
     private String lastname;
     @Expose
+    @Column(name = "mobile")
+    @Type(type = "text")
     private String mobile;
     @Expose
+    @Column(name = "email")
+    @Type(type = "text")
     private String email;
     @Expose
+    @Transient
     private String group;
     @Expose
+    @Column(name = "home")
+    @Type(type = "text")
     private String home;
     @Expose
+    @Column(name = "work")
+    @Type(type = "text")
     private String work;
     @Expose
+    @Column(name = "middlename")
     private String middlename;
     @Expose
+    @Column(name = "nickname")
     private String nickname;
     @Expose
+    @Column(name = "title")
     private String title;
     @Expose
+    @Column(name = "company")
     private String company;
     @Expose
+    @Column(name = "address")
+    @Type(type = "text")
     private String address;
     @Expose
+    @Column(name = "fax")
+    @Type(type = "text")
     private String fax;
     @Expose
+    @Column(name = "email2")
+    @Type(type = "text")
     private String email2;
     @Expose
+    @Column(name = "email3")
+    @Type(type = "text")
     private String email3;
     @Expose
+    @Column(name = "homepage")
+    @Type(type = "text")
     private String homepage;
+    @Transient
     private String allPhones;
+    @Transient
     private String allEmail;
+
+    @Transient
     private String address2;
     @Expose
+    @Column(name = "photo")
+    @Type(type = "text")
     private String photo;
 
     public File getPhoto() {
@@ -51,10 +87,6 @@ public class ContactData {
         } else {
             return null;
         }
-    }
-
-    public String getAddress2() {
-        return address2;
     }
     public String getAllPhones() {
         return allPhones;
@@ -69,6 +101,9 @@ public class ContactData {
 
     public String getCompany() {
         return company;
+    }
+    public String getAddress2() {
+        return address2;
     }
 
     public String getAddress() {
@@ -196,6 +231,10 @@ public class ContactData {
         this.address = address;
         return this;
     }
+    public ContactData withAddress2(String address2) {
+        this.address2 = address2;
+        return this;
+    }
 
     public ContactData withFax(String fax) {
         this.fax = fax;
@@ -219,10 +258,6 @@ public class ContactData {
 
     public ContactData withAllPhones(String allPhones) {
         this.allPhones = allPhones;
-        return this;
-    }
-    public ContactData withAddress2(String address2) {
-        this.address2 = address2;
         return this;
     }
 
