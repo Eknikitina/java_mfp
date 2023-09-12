@@ -7,6 +7,7 @@
     <list default="true" id="5f13b533-4d8b-413c-95a0-3d7e2c6ec2ad" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/mfp/addressbook/model/GroupData.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/mfp/addressbook/model/GroupData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,17 +87,7 @@
       <recent name="C:\Users\Екатерина\Desktop\java\java_mfp\java_mfp\addressbook-web-tests\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.DbConnectionTest">
-    <configuration name="C:/Users/Екатерина/Desktop/java/java_mfp/java_mfp/addressbook-web-tests/src/test/resources/testNG.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="addressbook-web-tests.test" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/addressbook-web-tests/src/test/resources/testNG.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.HbConnectionTest">
     <configuration name="ContactCreationTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <shortenClasspath name="NONE" />
@@ -169,6 +160,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HbConnectionTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="addressbook-web-tests.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.mfp.addressbook.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.stqa.mfp.addressbook.tests" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.mfp.addressbook.tests.HbConnectionTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ru.stqa.mfp.addressbook.tests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
@@ -187,18 +195,18 @@
     </configuration>
     <list>
       <item itemvalue="TestNG.DbConnectionTest" />
+      <item itemvalue="TestNG.HbConnectionTest" />
       <item itemvalue="TestNG.ru.stqa.mfp.addressbook.tests" />
-      <item itemvalue="TestNG.C:/Users/Екатерина/Desktop/java/java_mfp/java_mfp/addressbook-web-tests/src/test/resources/testNG.xml" />
       <item itemvalue="TestNG.GroupCreationTests" />
       <item itemvalue="TestNG.ContactCreationTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.HbConnectionTest" />
         <item itemvalue="TestNG.DbConnectionTest" />
         <item itemvalue="TestNG.GroupCreationTests" />
         <item itemvalue="TestNG.ru.stqa.mfp.addressbook.tests" />
         <item itemvalue="TestNG.ContactCreationTests" />
-        <item itemvalue="TestNG.C:/Users/Екатерина/Desktop/java/java_mfp/java_mfp/addressbook-web-tests/src/test/resources/testNG.xml" />
       </list>
     </recent_temporary>
   </component>
