@@ -21,7 +21,6 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.*;
 
 public class GroupCreationTests extends TestBase {
-Logger logger = LoggerFactory.getLogger(GroupCreationTests.class);
     @DataProvider
     public Iterator<Object[]> validGroupsFromXml() throws IOException {
         try (BufferedReader reader = new BufferedReader(new FileReader("src/test/resources/groups.xml"))) {
@@ -55,7 +54,6 @@ Logger logger = LoggerFactory.getLogger(GroupCreationTests.class);
 
     @Test(dataProvider = "validGroupsFromJson")
     public void testGroupCreation(GroupData group) {
-        logger.info("Start test testGroupCreation");
         app.goTo().groupPage();
         Groups before = app.group().all();
         app.group().create(group);
@@ -63,7 +61,6 @@ Logger logger = LoggerFactory.getLogger(GroupCreationTests.class);
         Groups after = app.group().all();
         assertThat(after, equalTo(
                 before.withAdded(group.withId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt()))));
-        logger.info("Stop test testGroupCreation");
     }
 
     @Test(enabled = false)

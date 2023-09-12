@@ -24,3 +24,4 @@ sandbox/build/classes/java/main/ru/stqa/mfp/sandbox/MyFirstProgram.class
 sandbox/build/classes/java/main/MyFirstProgram.class
 sandbox/.gradle/6.9.4/javaCompile/classAnalysis.bin
 sandbox/.gradle/6.9.4/javaCompile/classAnalysis.bin
+*.log
