@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5f13b533-4d8b-413c-95a0-3d7e2c6ec2ad" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/mfp/addressbook/appmanager/ContactHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/mfp/addressbook/appmanager/ContactHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/mfp/addressbook/model/ContactData.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/mfp/addressbook/model/ContactData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/mfp/addressbook/tests/ContactCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/mfp/addressbook/tests/ContactCreationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/mfp/addressbook/tests/ContactModificationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/mfp/addressbook/tests/ContactModificationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +87,7 @@
       <recent name="C:\Users\Екатерина\Desktop\java\java_mfp\java_mfp\addressbook-web-tests\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ContactCreationTests">
+  <component name="RunManager" selected="TestNG.ContactModificationTests">
     <configuration name="ContactCreationTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
@@ -182,11 +181,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.ContactCreationTests" />
         <item itemvalue="TestNG.ContactModificationTests" />
         <item itemvalue="TestNG.ContactDeletionTests" />
-        <item itemvalue="TestNG.ContactPhoneTests" />
         <item itemvalue="TestNG.ru.stqa.mfp.addressbook.tests" />
+        <item itemvalue="TestNG.ContactCreationTests" />
+        <item itemvalue="TestNG.ContactPhoneTests" />
       </list>
     </recent_temporary>
   </component>
@@ -216,6 +215,11 @@
           <line>760</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/mfp/addressbook/tests/ContactCreationTests.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
@@ -224,6 +228,11 @@
       </pinned-members>
     </pin-to-top-manager>
     <watches-manager>
+      <configuration name="TestNG">
+        <watch expression="((ContactData)before.toArray()[0]).photo" custom="ru.stqa.mfp.addressbook.model.ContactData" />
+        <watch expression="((ContactData)before.toArray()[0]).address2" language="JAVA" custom="ru.stqa.mfp.addressbook.model.ContactData" />
+        <watch expression="((ContactData)before.toArray()[0]).address2" language="JAVA" custom="ru.stqa.mfp.addressbook.model.ContactData" />
+      </configuration>
       <inline-watch fileUrl="file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/mfp/addressbook/tests/ContactModificationTests.java" line="29">
         <watch expression="modifiedContact.mobile" language="JAVA" />
       </inline-watch>
