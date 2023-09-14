@@ -71,6 +71,7 @@ public class ContactCreationTests extends TestBase implements JsonDeserializer<F
         assertThat(app.contact().count(), equalTo(before.size()));
         Contacts after = app.db().contacts();
         assertThat(after, equalTo(before));
+        verifyContactListInUI();
     }
 
     @Override
