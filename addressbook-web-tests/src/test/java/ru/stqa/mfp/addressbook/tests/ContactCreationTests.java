@@ -2,10 +2,13 @@ package ru.stqa.mfp.addressbook.tests;
 
 import com.google.gson.*;
 import com.google.gson.reflect.TypeToken;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import ru.stqa.mfp.addressbook.model.ContactData;
 import ru.stqa.mfp.addressbook.model.Contacts;
+import ru.stqa.mfp.addressbook.model.GroupData;
+import ru.stqa.mfp.addressbook.model.Groups;
 
 import java.io.*;
 import java.lang.reflect.Type;
@@ -17,6 +20,13 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.*;
 
 public class ContactCreationTests extends TestBase implements JsonDeserializer<File> {
+    @BeforeMethod
+    public void ensurePreconditions() {
+        app.goTo().groupPage();
+        if (app.db().groups().size() == 0) {
+            app.group().create(new GroupData().withName("test1"));
+        }
+    }
     @DataProvider
     public Iterator<Object[]> validContactsFromJson() throws IOException {
         try (BufferedReader reader = new BufferedReader(new FileReader("src/test/resources/contact.json"))) {
@@ -33,6 +43,7 @@ public class ContactCreationTests extends TestBase implements JsonDeserializer<F
     }
     @Test(dataProvider = "validContactsFromJson")
     public void testContactCreation(ContactData contact) throws Exception {
+        Groups groups = app.db().groups();
         app.goTo().homePage();
         Contacts before = app.db().contacts();
         app.goTo().gotoContactCreation();
@@ -53,7 +64,6 @@ public class ContactCreationTests extends TestBase implements JsonDeserializer<F
                 withName("Иван").
                 withMobile("").
                 withEmail("email@gmail.com").
-                withGroup(null).
                 withMiddlename("").
                 withEmail("").
                 withHome("").

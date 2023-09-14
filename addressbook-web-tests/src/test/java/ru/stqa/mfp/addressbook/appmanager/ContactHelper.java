@@ -45,10 +45,9 @@ public class ContactHelper extends HelperBase {
         type(By.name("homepage"), contactData.getHomepage());
         attach(By.name("photo"), contactData.getPhoto());
         if (creation) {
-            try {
-                selectByText(By.name("new_group"), contactData.getGroup());
-            } catch (Exception NoSuchElementException) {
-                selectDefault(By.name("new_group"));
+            if (contactData.getGroups().size() > 0) {
+                Assert.assertEquals(contactData.getGroups().size(), 1);
+                selectByText(By.name("new_group"), contactData.getGroups().iterator().next().getName());
             }
         } else {
             Assert.assertFalse(isElementPresent(By.name("new_group")));
@@ -56,7 +55,32 @@ public class ContactHelper extends HelperBase {
     }
 
     public void selectContactById(int id) {
-        wd.findElement(By.cssSelector("input[value='" + id + "']")).click();
+        click(By.cssSelector(String.format("input[value='%s']", id)));
+    }
+
+    private void selectGroupForAddById(int groupId) {
+        click(By.cssSelector(String.format("select[name='to_group'] > option[value='%s']", groupId)));
+    }
+
+    private void addSelectedContactToGroup() {
+        click(By.xpath("//input[@value='Add to']"));
+    }
+    public void addToGroup(int contactId, int groupId) {
+        selectContactById(contactId);
+        selectGroupForAddById(groupId);
+        addSelectedContactToGroup();
+        contactCache = null;
+    }
+    private void selectGroupPageById(int groupId) {
+        click(By.cssSelector(String.format("select[name='group'] > option[value='%s']", groupId)));
+    }
+    private void removeSelectedContactFromGroup() {
+        click(By.xpath("//input[@name='remove']"));
+    }
+    public void removeFromGroup(int contactId, int groupId) {
+        selectGroupPageById(groupId);
+        selectContactById(contactId);
+        removeSelectedContactFromGroup();
     }
 
     public void deleteSelectedContact() {
@@ -69,7 +93,8 @@ public class ContactHelper extends HelperBase {
 
     public void initContactModification(int id) {
         //wd.findElement(By.cssSelector("a[href='edit.php?id="+ id +"']")).click();
-        wd.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
+        //wd.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
+        click(By.cssSelector(String.format("a[href='edit.php?id=%s']", id)));
     }
 
 

@@ -59,7 +59,6 @@ public class ContactDataGenerator {
                     withMiddlename(String.format("Middlename %s", i)).
                     withMobile(String.format("+%s%s", i, i)).
                     withEmail(String.format("mail%s@mail.ru", i)).
-                    withGroup(String.format("test1 %s", i)).
                     withHome(String.format("+%s%s%s", i, i, i)).
                     withWork(String.format("+%s%s%s%s", i, i, i, i)).
                     withNickname(String.format("nickname %s", i)).

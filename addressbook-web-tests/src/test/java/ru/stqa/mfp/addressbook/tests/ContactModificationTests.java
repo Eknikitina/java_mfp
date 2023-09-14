@@ -19,7 +19,7 @@ public class ContactModificationTests extends TestBase {
         if (app.db().contacts().size() == 0) {
                 if (app.contact().all().size() == 0) {
                     app.goTo().gotoContactCreation();
-                    app.contact().create(new ContactData().withLastname("Муромский").withName("Иван").withMobile("").withEmail("email@gmail.com").withGroup("group1").withPhoto(photo));
+                    app.contact().create(new ContactData().withLastname("Муромский").withName("Иван").withMobile("").withEmail("email@gmail.com").withPhoto(photo));
                 }
             }
         }
@@ -34,7 +34,6 @@ public class ContactModificationTests extends TestBase {
                 withName("Иван").
                 withMobile("").
                 withEmail("email@gmail.com").
-                withGroup(null).
                 withMiddlename("").
                 withEmail("").
                 withHome("").
