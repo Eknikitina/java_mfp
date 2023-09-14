@@ -82,6 +82,20 @@ public class ContactData {
     @Type(type = "text")
     private String photo;
 
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ContactData that = (ContactData) o;
+        return id == that.id && Objects.equals(name, that.name) && Objects.equals(lastname, that.lastname) && Objects.equals(mobile, that.mobile) && Objects.equals(email, that.email) && Objects.equals(group, that.group) && Objects.equals(home, that.home) && Objects.equals(work, that.work) && Objects.equals(middlename, that.middlename) && Objects.equals(nickname, that.nickname) && Objects.equals(title, that.title) && Objects.equals(company, that.company) && Objects.equals(address, that.address) && Objects.equals(fax, that.fax) && Objects.equals(email2, that.email2) && Objects.equals(email3, that.email3) && Objects.equals(homepage, that.homepage) && Objects.equals(allPhones, that.allPhones) && Objects.equals(allEmail, that.allEmail) && Objects.equals(address2, that.address2);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, lastname, mobile, email, group, home, work, middlename, nickname, title, company, address, fax, email2, email3, homepage, allPhones, allEmail, address2);
+    }
+
     @Override
     public String toString() {
         return "ContactData{" +
@@ -108,8 +122,6 @@ public class ContactData {
                 ", photo='" + photo + '\'' +
                 '}';
     }
-
-
 
     public File getPhoto() {
         if (photo != null) {
@@ -294,19 +306,6 @@ public class ContactData {
     public ContactData withAllEmail(String allEmail) {
         this.allEmail = allEmail;
         return this;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        ContactData that = (ContactData) o;
-        return id == that.id && Objects.equals(name, that.name) && Objects.equals(lastname, that.lastname) && Objects.equals(mobile, that.mobile) && Objects.equals(email, that.email) && Objects.equals(group, that.group) && Objects.equals(home, that.home) && Objects.equals(work, that.work) && Objects.equals(middlename, that.middlename) && Objects.equals(nickname, that.nickname) && Objects.equals(title, that.title) && Objects.equals(company, that.company) && Objects.equals(address, that.address) && Objects.equals(fax, that.fax) && Objects.equals(email2, that.email2) && Objects.equals(email3, that.email3) && Objects.equals(homepage, that.homepage) && Objects.equals(allPhones, that.allPhones) && Objects.equals(allEmail, that.allEmail) && Objects.equals(address2, that.address2);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, name, lastname, mobile, email, group, home, work, middlename, nickname, title, company, address, fax, email2, email3, homepage, allPhones, allEmail, address2);
     }
 
     public ContactData withPhoto(File photo) {
