@@ -21,6 +21,7 @@ public class ContactDeletionTests extends TestBase {
                         withName("Иван").
                         withMobile("80009000000").
                         withEmail("email@gmail.com"));
+
             }
         }
     }

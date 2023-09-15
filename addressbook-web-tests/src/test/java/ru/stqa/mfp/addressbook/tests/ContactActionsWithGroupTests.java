@@ -15,11 +15,11 @@ public class ContactActionsWithGroupTests extends TestBase {
 
     @BeforeMethod
     public void ensurePreconditions() {
-        File photo = new File("src/test/resources/avatar.jpg");
+        File photo = new File("src/test/resources/avatar.png");
         if (app.db().contacts().size() == 0) {
-            app.goTo().homePage();
+            app.goTo().gotoContactCreation();
             app.contact().create(new ContactData().
-                    withLastname("Муромский'").
+                    withLastname("Муромский").
                     withName("Иван").
                     withMobile("").
                     withEmail("email@gmail.com").
