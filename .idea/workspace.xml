@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f13b533-4d8b-413c-95a0-3d7e2c6ec2ad" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/mantis-tests.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/mantis-tests.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/test-20230912T092905.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/test-20230912T094115.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/test-20230912T094929.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mantis-tests/.gradle/6.9.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/mantis-tests/.gradle/6.9.4/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mantis-tests/.gradle/6.9.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/mantis-tests/.gradle/6.9.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mantis-tests/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/mantis-tests/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mantis-tests/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/mantis-tests/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mantis-tests/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/mantis-tests/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/mfp/mantis/appmanager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/mfp/mantis/appmanager/ApplicationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mantis-tests/src/test/resources/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/mantis-tests/src/test/resources/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +44,9 @@
           <activation />
         </task>
         <task path="$PROJECT_DIR$/sandbox">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/mantis-tests">
           <activation />
         </task>
         <projects_view>
@@ -96,6 +100,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ru.stqa.mfp.mantis.appmanager" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Екатерина\Desktop\java\java_mfp\java_mfp\mantis-tests\src\test\resources" />
       <recent name="C:\Users\Екатерина\Desktop\java\java_mfp\java_mfp\mantis-tests\src\test" />
@@ -106,7 +113,7 @@
       <recent name="ru.stqa.mfp.mantis.tests" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ContactActionsWithGroupTests">
+  <component name="RunManager" selected="TestNG.RegistrationTests">
     <configuration name="ContactActionsWithGroupTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
@@ -158,23 +165,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContactPhoneTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="addressbook-web-tests.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.stqa.mfp.addressbook.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.stqa.mfp.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.mfp.addressbook.tests.ContactPhoneTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="GroupDeletionTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <shortenClasspath name="NONE" />
@@ -202,16 +192,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HbConnectionTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="addressbook-web-tests.test" />
+    <configuration name="LoginTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="mantis-tests.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.stqa.mfp.addressbook.tests.*" />
+          <option name="PATTERN" value="ru.stqa.mfp.mantis.tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.stqa.mfp.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.mfp.addressbook.tests.HbConnectionTest" />
+      <option name="PACKAGE_NAME" value="ru.stqa.mfp.mantis.tests" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.mfp.mantis.tests.LoginTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistrationTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="mantis-tests.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.mfp.mantis.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.stqa.mfp.mantis.tests" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.mfp.mantis.tests.RegistrationTests" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -220,19 +227,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="TestNG.LoginTests" />
+      <item itemvalue="TestNG.RegistrationTests" />
       <item itemvalue="TestNG.ContactActionsWithGroupTests" />
       <item itemvalue="TestNG.ContactDeletionTests" />
-      <item itemvalue="TestNG.ContactPhoneTests" />
-      <item itemvalue="TestNG.HbConnectionTest" />
       <item itemvalue="TestNG.ContactCreationTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.RegistrationTests" />
+        <item itemvalue="TestNG.LoginTests" />
         <item itemvalue="TestNG.ContactActionsWithGroupTests" />
         <item itemvalue="TestNG.ContactDeletionTests" />
         <item itemvalue="TestNG.ContactCreationTests" />
-        <item itemvalue="TestNG.HbConnectionTest" />
-        <item itemvalue="TestNG.ContactPhoneTests" />
       </list>
     </recent_temporary>
   </component>
@@ -253,6 +260,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
