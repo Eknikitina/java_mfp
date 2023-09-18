@@ -11,7 +11,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
-import java.util.regex.MatchResult;
 
 public class ApplicationManager {
     private final String browser;
@@ -21,6 +20,8 @@ public class ApplicationManager {
     private FtpHelper ftp;
     private MailHelper mailHelper;
     private JamesHelper jamesHelper;
+    private PasswordHelper password;
+    private DbHelper dbHelper;
 
     public ApplicationManager(String browser) {
         this.browser = browser;
@@ -30,6 +31,7 @@ public class ApplicationManager {
     public void init() throws IOException {
         String target = System.getProperty("target", "local");
         properties.load(new FileReader(new File(String.format("src/test/resources/%s.properties", target))));
+        dbHelper = new DbHelper();
     }
 
     public void stop() {
@@ -85,5 +87,15 @@ public class ApplicationManager {
             jamesHelper = new JamesHelper(this);
         }
         return jamesHelper;
+    }
+    public PasswordHelper password() {
+        if (password == null)
+            password = new PasswordHelper(this);
+
+        return password;
+    }
+
+    public DbHelper db() {
+        return dbHelper;
     }
 }
