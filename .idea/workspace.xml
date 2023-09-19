@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mantis-tests/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/mantis-tests/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/mfp/mantis/appmanager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/mfp/mantis/appmanager/ApplicationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/mfp/mantis/appmanager/SoapHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/mfp/mantis/appmanager/SoapHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/mfp/mantis/tests/SoapTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/mfp/mantis/tests/SoapTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/mfp/mantis/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/mantis-tests/src/test/java/ru/stqa/mfp/mantis/tests/TestBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mantis-tests/src/test/resources/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/mantis-tests/src/test/resources/local.properties" afterDir="false" />
