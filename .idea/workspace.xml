@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f13b533-4d8b-413c-95a0-3d7e2c6ec2ad" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/modules/github-sample.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/github-sample.test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/mfp/rest/Issue.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/mfp/rest/model/Issue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/mfp/rest/RestAssuredTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/mfp/rest/tests/RestAssuredTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/mfp/rest/RestTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/mfp/rest/tests/RestTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +21,9 @@
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/admin_panel">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/github-sample">
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/mantis-tests">
@@ -90,7 +94,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Екатерина/Desktop/java/java_mfp/java_mfp/rest-sample/build.gradle",
+    "last_opened_file_path": "C:/Users/Екатерина/Desktop/java/java_mfp/java_mfp/github-sample/build.gradle",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -118,34 +122,41 @@
       <recent name="ru.stqa.mfp.mantis.tests" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.RestTests">
-    <configuration name="ChangePasswordTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="mantis-tests.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.stqa.mfp.mantis.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.stqa.mfp.mantis.tests" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.mfp.mantis.tests.ChangePasswordTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RunManager" selected="TestNG.GitHubTests">
+    <configuration name="GitHubTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/github-sample" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.stqa.mfp.github.GitHubTests&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
     </configuration>
-    <configuration name="RegistrationTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="mantis-tests.test" />
+    <configuration name="GitHubTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="github-sample.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.stqa.mfp.mantis.tests.*" />
+          <option name="PATTERN" value="ru.stqa.mfp.github.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.stqa.mfp.mantis.tests" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.mfp.mantis.tests.RegistrationTests" />
+      <option name="PACKAGE_NAME" value="ru.stqa.mfp.github" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.mfp.github.GitHubTests" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -205,19 +216,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Gradle.GitHubTests" />
+      <item itemvalue="TestNG.GitHubTests" />
       <item itemvalue="TestNG.RestAssuredTests" />
       <item itemvalue="TestNG.RestTests" />
-      <item itemvalue="TestNG.ChangePasswordTests" />
       <item itemvalue="TestNG.SoapTests" />
-      <item itemvalue="TestNG.RegistrationTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.GitHubTests" />
+        <item itemvalue="Gradle.GitHubTests" />
         <item itemvalue="TestNG.RestTests" />
         <item itemvalue="TestNG.RestAssuredTests" />
         <item itemvalue="TestNG.SoapTests" />
-        <item itemvalue="TestNG.ChangePasswordTests" />
-        <item itemvalue="TestNG.RegistrationTests" />
       </list>
     </recent_temporary>
   </component>
