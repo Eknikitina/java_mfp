@@ -1,15 +1,21 @@
 package ru.stqa.mfp.sandbox;
 
 public class Point {
-  public double p1;
-  public double p2;
+  public int x;
+  public int y;
 
-  public Point(double p1, double p2) {
-    this.p1 = p1;
-    this.p2 = p2;
+  public Point( int x, int y) {
+    this.x = x;
+    this.y = y;
   }
 
-  public double distance(Point point) {
-    return Math.sqrt((point.p1 - this.p1) * (point.p1 - this.p1) + (this.p2 - point.p2) * (this.p2 - point.p2));
+  // 1 вариант
+  public static double distance(Point p1, Point p2) {
+    return Math.sqrt(Math.pow(p2.x - p1.x, 2) + Math.pow(p2.y - p1.y, 2));
+  }
+
+  // 2 вариант
+  public double distance(Point p) {
+    return Math.sqrt(Math.pow(p.x - this.x, 2) + Math.pow(p.y - this.y, 2));
   }
 }

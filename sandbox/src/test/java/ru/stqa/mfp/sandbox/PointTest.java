@@ -5,17 +5,26 @@ import org.testng.annotations.Test;
 
 public class PointTest {
 
+  // задаю точки
+  public static final Point p1 = new Point(1, 2);
+  public static final Point p2 = new Point(2, 1);
+
+  // тест для метода класса MyFirstProgram
   @Test
-  public void testDistanceTrue() {
-    Point point1 = new Point(2.0, 6.0);
-    Point point2 = new Point(4.0, 8.0);
-    Assert.assertEquals(point1.distance(point2), 2.8284271247461903);
+  public void testDistance1() {
+    Assert.assertEquals(MyFirstProgram.distance(p1, p2), 1.4142135623730951);
   }
+
+  // static
   @Test
-  public void testDistanceFalse() {
-    Point point1 = new Point(2.0, 4.0);
-    Point point2 = new Point(6.0, 8.0);
-    Assert.assertNotEquals(point1.distance(point2), 2.8284271247461903, "Result is invalid!");
+  public void testDistance2() {
+    Assert.assertEquals(Point.distance(p1, p2), 1.4142135623730951);
+  }
+
+  // non-static
+  @Test
+  public void testDistance3() {
+    Assert.assertEquals(p1.distance(p2), 1.4142135623730951);
   }
 }
 
