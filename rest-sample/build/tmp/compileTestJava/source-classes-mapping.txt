@@ -1,0 +1,4 @@
+ru/stqa/mfp/rest/Issue.java
+ ru.stqa.mfp.rest.Issue
+ru/stqa/mfp/rest/RestTests.java
+ ru.stqa.mfp.rest.RestTests
