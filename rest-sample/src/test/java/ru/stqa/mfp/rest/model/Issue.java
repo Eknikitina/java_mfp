@@ -1,4 +1,4 @@
-package ru.stqa.mfp.rest;
+package ru.stqa.mfp.rest.model;
 
 import java.util.Objects;
 
@@ -32,6 +32,15 @@ public class Issue {
     public Issue withDescription(String description) {
         this.description = description;
         return this;
+    }
+
+    @Override
+    public String toString() {
+        return "Issue{" +
+                "id=" + id +
+                ", subject='" + subject + '\'' +
+                ", description='" + description + '\'' +
+                '}';
     }
 
     @Override

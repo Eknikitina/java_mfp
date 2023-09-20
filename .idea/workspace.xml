@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5f13b533-4d8b-413c-95a0-3d7e2c6ec2ad" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest-sample/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/rest-sample/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/mfp/rest/Issue.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/mfp/rest/model/Issue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/mfp/rest/RestAssuredTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/mfp/rest/tests/RestAssuredTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/mfp/rest/RestTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/rest-sample/src/test/java/ru/stqa/mfp/rest/tests/RestTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +118,7 @@
       <recent name="ru.stqa.mfp.mantis.tests" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.RestAssuredTests">
+  <component name="RunManager" selected="TestNG.RestTests">
     <configuration name="ChangePasswordTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="mantis-tests.test" />
       <extension name="coverage">
@@ -155,12 +157,12 @@
       <module name="rest-sample.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.stqa.mfp.rest.*" />
+          <option name="PATTERN" value="ru.stqa.mfp.rest.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.stqa.mfp.rest" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.mfp.rest.RestAssuredTests" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.mfp.rest.tests.RestAssuredTests" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -172,12 +174,12 @@
       <module name="rest-sample.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.stqa.mfp.rest.*" />
+          <option name="PATTERN" value="ru.stqa.mfp.rest.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.stqa.mfp.rest" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.mfp.rest.RestTests" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.mfp.rest.tests.RestTests" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -211,8 +213,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.RestAssuredTests" />
         <item itemvalue="TestNG.RestTests" />
+        <item itemvalue="TestNG.RestAssuredTests" />
         <item itemvalue="TestNG.SoapTests" />
         <item itemvalue="TestNG.ChangePasswordTests" />
         <item itemvalue="TestNG.RegistrationTests" />
