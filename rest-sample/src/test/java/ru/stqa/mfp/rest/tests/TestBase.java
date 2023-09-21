@@ -17,7 +17,7 @@ public class TestBase {
     }
 
     public boolean isIssueOpen(int issueId) throws IOException {
-        return app.rest().getStatusIssue(issueId);
+        return app.rest().isIssueOpen(issueId);
     }
 
     public void skipIfNotFixed(int issueId) throws IOException {

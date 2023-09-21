@@ -60,7 +60,7 @@ public class RestHelper {
         return Executor.newInstance().auth(app.getProperty("rest.auth"), app.getProperty("rest.password"));
     }
 
-    public boolean getStatusIssue(int issueId) throws IOException {
+    public boolean isIssueOpen(int issueId) throws IOException {
         String json = getIssueRequest(issueId);
         JsonElement parsed = new JsonParser().parse(json);
         JsonElement issue = parsed.getAsJsonObject().get("issues").getAsJsonArray().iterator().next();

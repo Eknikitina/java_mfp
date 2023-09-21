@@ -1,7 +1,6 @@
 package ru.stqa.mfp.mantis.appmanager;
 
 import biz.futureware.mantis.rpc.soap.client.*;
-import org.testng.SkipException;
 import ru.stqa.mfp.mantis.model.Issue;
 import ru.stqa.mfp.mantis.model.Project;
 
@@ -49,7 +48,7 @@ public class SoapHelper {
                 withProject(new Project().withId(createdIssueData.getProject().getId().intValue()).
                                           withName(createdIssueData.getProject().getName()));
     }
-    public boolean getStatusIssue(int issueId) throws MalformedURLException, ServiceException, RemoteException {
+    public boolean isIssueOpen(int issueId) throws MalformedURLException, ServiceException, RemoteException {
         MantisConnectPortType mcp = getMantisConnect();
         IssueData issueData = mcp.mc_issue_get(app.getProperty("web.adminLogin"), app.getProperty("web.adminPassword"), BigInteger.valueOf(issueId));
         return issueData.getResolution().getName().equals("open");
