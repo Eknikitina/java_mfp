@@ -16,8 +16,8 @@ public class ContactPhoneTests extends TestBase {
         app.goTo().homePage();
         if (app.db().contacts().size() == 0) {
             if (app.contact().all().size() == 0) {
-                app.contact().create(new ContactData().withLastname("Муромский").withName("Иван").withMiddlename("Иванович").withNickname("Огурчик").withTitle("Title").withCompany("Company").withAddress("Address").withHome("111").
-                        withMobile("8800").withWork("8863").withFax("222").withEmail("email").withEmail2("email2").withEmail3("email3").withAddress2("г.Москва").withHomepage("г.Ростов"));
+                app.contact().create(new ContactData().withLastname("Muromskii").withName("Ivan").withMiddlename("Ivanovich").withNickname("Pickles").withTitle("Title").withCompany("Company").withAddress("Address").withHome("111").
+                        withMobile("8800").withWork("8863").withFax("222").withEmail("email").withEmail2("email2").withEmail3("email3").withAddress2("Moscow").withHomepage("Rostov"));
             }
         }
     }

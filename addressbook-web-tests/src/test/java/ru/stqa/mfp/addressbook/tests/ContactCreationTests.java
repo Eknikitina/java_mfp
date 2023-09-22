@@ -60,8 +60,8 @@ public class ContactCreationTests extends TestBase implements JsonDeserializer<F
         Contacts before = app.db().contacts();
         app.goTo().gotoContactCreation();
         ContactData contact = new ContactData().
-                withLastname("Муромский'").
-                withName("Иван").
+                withLastname("Muromskii'").
+                withName("Ivan").
                 withMobile("").
                 withEmail("email@gmail.com").
                 withMiddlename("").

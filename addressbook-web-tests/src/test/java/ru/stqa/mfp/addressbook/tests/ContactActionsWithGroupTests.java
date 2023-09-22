@@ -19,8 +19,8 @@ public class ContactActionsWithGroupTests extends TestBase {
         if (app.db().contacts().size() == 0) {
             app.goTo().gotoContactCreation();
             app.contact().create(new ContactData().
-                    withLastname("Муромский").
-                    withName("Иван").
+                    withLastname("Muromskii").
+                    withName("Ivan").
                     withMobile("").
                     withEmail("email@gmail.com").
                     withMiddlename("").
