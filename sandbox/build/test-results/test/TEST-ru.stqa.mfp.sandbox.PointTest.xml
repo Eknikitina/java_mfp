@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.stqa.mfp.sandbox.PointTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-09-22T15:18:12" hostname="LAPTOP-843QP6DH" time="0.004">
+  <properties/>
+  <testcase name="testDistance1" classname="ru.stqa.mfp.sandbox.PointTest" time="0.002"/>
+  <testcase name="testDistance2" classname="ru.stqa.mfp.sandbox.PointTest" time="0.0"/>
+  <testcase name="testDistance3" classname="ru.stqa.mfp.sandbox.PointTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
