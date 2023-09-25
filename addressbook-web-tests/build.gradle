@@ -16,10 +16,8 @@ dependencies {
     implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.1.5'
     implementation group: 'mysql', name: 'mysql-connector-java', version: '5.1.38'
     implementation group: 'org.hibernate', name: 'hibernate-core', version: '5.1.0.Final'
-    implementation group: 'jakarta.xml.bind', name: 'jakarta.xml.bind-api', version: '4.0.1'
-    implementation group: 'org.glassfish.jaxb', name: 'jaxb-runtime', version: '4.0.3'
-    implementation group: 'jakarta.xml.ws', name: 'jakarta.xml.ws-api', version: '4.0.0'
-    implementation group: 'com.sun.xml.ws', name: 'jaxws-rt', version: '4.0.1'
+    implementation "jakarta.xml.bind:jakarta.xml.bind-api:2.3.2"
+    implementation "org.glassfish.jaxb:jaxb-runtime:2.3.2"
 }
 task testGroups(type: Test) {
     useTestNG{
