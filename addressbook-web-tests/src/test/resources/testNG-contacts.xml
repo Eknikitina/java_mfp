@@ -5,6 +5,7 @@
         <classes>
             <class name="ru.stqa.mfp.addressbook.tests.ContactCreationTests"/>
             <class name="ru.stqa.mfp.addressbook.tests.ContactModificationTests"/>
+            <class name="ru.stqa.mfp.addressbook.tests.ContactDeletionTests"/>
         </classes>
     </test>
 </suite>
